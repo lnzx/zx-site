@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords"  content="诛仙,手游,自动答题,温泉歌会,文曲试炼" />
+    <meta name="description" content="诛仙手游桌面版温泉歌会、文曲试炼自动答题器" />
+    <title>诛仙手游桌面版自动答题器</title>
+
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <style>
+        .container {width: 960px;}
+        .ml-160 {margin-left: 160px;}
+        .mt-50 {margin-top: 50px;}
+        .mt-100 {margin-top: 100px;}
+    </style>
+</head>
+<body>
+    <header class="container">
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+              <a class="navbar-item" href="/">
+                <img src="logo.png" width="112" height="28">
+              </a>
+          
+              <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </a>
+            </div>
+          
+            <div id="navbarBasicExample" class="navbar-menu">
+              <div class="navbar-start">
+                <a class="navbar-item" href="#download">
+                  下载
+                </a>
+          
+                <a class="navbar-item" href="#document">
+                  文档
+                </a>
+
+                <a class="navbar-item" href="#Q&A">
+                    Q&A
+                </a>
+
+                <a class="navbar-item" href="https://www.virustotal.com/" target="_blank" rel="noopener noreferrer">
+                    病毒检测
+                  </a>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <main class="container mt-4">
+        <div class="columns">
+            <div>
+                <h1 class="title">诛仙手游桌面版自动答题器</h1>
+                <p>支持温泉歌会自动答题，后续将加入文曲试炼。</p>
+
+                <a id="download" href="app/zx-clicker-3.3.zip" class="button is-success mt-6">立即下载</a>
+            </div>
+            <div class="ml-160">
+                <img src="main.png" width="400" height="220">
+            </div>
+        </div>
+        <div class="columns mt-3 mb-6">
+            <div class="column is-6">
+                <h1 id="document" class="subtitle is-3">使用说明</h1>  
+                <p>先下载软件，然后解压缩到一个文件夹，打开 <code>zx-clicker.exe</code>。</p><br>
+                <p>如果没有运行游戏，会提示找不到游戏，只要运行游戏即可。</p> <br>
+                <p>游戏运行之后，点击一下软件的<code>初始化</code>按钮，之后就能答题了。</p> <br>
+                <p>还有一点需要注意：如果移动了游戏窗口的位置，也请点一下<code>初始化</code>按钮，然后再答题。</p><br>
+                
+                <h1 id="Q&A" class="subtitle is-3">Q&A</h1>
+                <p>
+                    0. 收费吗？
+                    <br>
+                    免费。因为是使用的腾讯的收费服务，每个月有1000免费额度。
+                </p>
+                <br>
+                <p>
+                    1. 如何答题？
+                    <br>
+                    每次有新题出现的时候点一下<code>答题</code>按钮即可。具体看视频操作。
+                </p>
+                <br>    
+                <p>
+                    2. 如果出现以下错？
+                    <br>
+                    <img src="dotnet.png">
+                    说明你的电脑没有安装.net，去微软官网下载安装即可。根据自己电脑型号，选择32位，或64位下载安装。
+                    官网链接：<br>
+                    <a target="_blank" rel="noopener noreferrer" href="https://dotnet.microsoft.com/download/dotnet/5.0">https://dotnet.microsoft.com/download/dotnet/5.0</a>
+                    <img src="dotdown.png">
+                </p>
+                <br>
+                <p>
+                    3. 安全吗，是病毒吗，会盗号吗？<br>
+                    请先杀毒，请保护好自己游戏的保护密码。
+                </p><br>
+                <p>
+                    4. 新功能？<br>
+                    有时间将加入文曲试炼。
+                </p><br>
+                <p>
+                    5. 有问题需要帮助？<br>
+                    QQ: 1929703 <br>
+                    Email: tzx@pm.me
+                </p>
+            </div>
+            <div>
+                <video src="video.mp4" controls="controls" ></video>
+            </div>
+        </div>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+        // Get all "navbar-burger" elements
+        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+        // Check if there are any navbar burgers
+        if ($navbarBurgers.length > 0) {
+
+        // Add a click event on each of them
+        $navbarBurgers.forEach( el => {
+            el.addEventListener('click', () => {
+
+            // Get the target from the "data-target" attribute
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
+
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            el.classList.toggle('is-active');
+            $target.classList.toggle('is-active');
+
+            });
+        });
+        }
+
+        });
+    </script>
+</body>
+</html>

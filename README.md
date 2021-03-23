@@ -1,3 +1,6 @@
 # zx-site
 
 诛仙手游温泉歌会，文曲试炼自动答题器
+
+
+https://zxs.vercel.app/
